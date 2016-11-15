@@ -17,12 +17,13 @@ module.exports = {
         })
     ],
     module: {
-        loaders: [{
-            test: /\.css$/,
-            loaders: ['style', 'css']
-        },
+        loaders: [
             {
-                test: /\.(png|jpg)$/,
+                test: /\.css$/,
+                loaders: ['style', 'css']
+            },
+            {
+                test: /\.(png|jpg|png)$/,
                 loaders: [
                     'file?hash=sha512&digest=hex&name=[hash].[ext]',
                     'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
